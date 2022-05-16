@@ -1,0 +1,34 @@
+{
+  "id": "4e6ec8b8-08a2-4a71-a49b-6a75dcd49ec7",
+  "name": "AGFW Address Management",
+  "publisher": "Halvotec NAV Solutions GmbH",
+  "version": "1.0.0.0",
+  "brief": "",
+  "description": "",
+  "privacyStatement": "",
+  "EULA": "",
+  "help": "",
+  "url": "",
+  "logo": "",
+  "dependencies": [
+    {
+      "id": "54e0c064-5d57-4413-b401-1c701b3a9af0",
+      "publisher": "Halvotec NAV Solutions GmbH",
+      "name": "MultipleChoice",
+      "version": "1.0.0.0"
+    }
+  ],
+  "screenshots": [],
+  "platform": "1.0.0.0",
+  "application": "18.0.0.0",
+  "idRanges": [
+    {
+      "from": 50200,
+      "to": 50399
+    }
+  ],
+  "contextSensitiveHelpUrl": "https://AGFW.com/help/",
+  "showMyCode": true,
+  "runtime": "7.0",
+  "target": "OnPrem"
+}

@@ -1,0 +1,284 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2016/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <AutoRefresh>0</AutoRefresh>
+  <DataSources>
+    <DataSource Name="DataSource">
+      <ConnectionProperties>
+        <DataProvider>SQL</DataProvider>
+        <ConnectString />
+      </ConnectionProperties>
+      <rd:SecurityType>None</rd:SecurityType>
+    </DataSource>
+  </DataSources>
+  <ReportSections>
+    <ReportSection>
+      <Body>
+        <Height>2in</Height>
+        <Style />
+      </Body>
+      <Width>6.5in</Width>
+      <Page>
+        <Style />
+      </Page>
+    </ReportSection>
+  </ReportSections>
+  <Code>Public Function BlankZero(ByVal Value As Decimal)
+    if Value = 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankPos(ByVal Value As Decimal)
+    if Value &gt; 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankZeroAndPos(ByVal Value As Decimal)
+    if Value &gt;= 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankNeg(ByVal Value As Decimal)
+    if Value &lt; 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankNegAndZero(ByVal Value As Decimal)
+    if Value &lt;= 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+</Code>
+  <Language>=User!Language</Language>
+  <ConsumeContainerWhitespace>true</ConsumeContainerWhitespace>
+  <rd:ReportUnitType>Inch</rd:ReportUnitType>
+  <rd:ReportID>0eeb6585-38ae-40f1-885b-8d50088d51b4</rd:ReportID>
+  <DataSets>
+    <DataSet Name="DataSet_Result">
+      <Fields>
+        <Field Name="No_MemberPriceOfInvoice">
+          <DataField>No_MemberPriceOfInvoice</DataField>
+        </Field>
+        <Field Name="BeitrittsDescription">
+          <DataField>BeitrittsDescription</DataField>
+        </Field>
+        <Field Name="ContactNo_MemberPriceOfInvoice">
+          <DataField>ContactNo_MemberPriceOfInvoice</DataField>
+        </Field>
+        <Field Name="YearCode">
+          <DataField>YearCode</DataField>
+        </Field>
+        <Field Name="ContributionMoney_MemberPriceOfInvoice">
+          <DataField>ContributionMoney_MemberPriceOfInvoice</DataField>
+        </Field>
+        <Field Name="ContributionMoney_MemberPriceOfInvoiceFormat">
+          <DataField>ContributionMoney_MemberPriceOfInvoiceFormat</DataField>
+        </Field>
+        <Field Name="ContributionType_MemberPriceOfInvoice">
+          <DataField>ContributionType_MemberPriceOfInvoice</DataField>
+        </Field>
+        <Field Name="ContributionIST_MemberPriceOfInvoice">
+          <DataField>ContributionIST_MemberPriceOfInvoice</DataField>
+        </Field>
+        <Field Name="ContributionIST_MemberPriceOfInvoiceFormat">
+          <DataField>ContributionIST_MemberPriceOfInvoiceFormat</DataField>
+        </Field>
+        <Field Name="WZPISAmount_MemberPriceOfInvoice">
+          <DataField>WZPISAmount_MemberPriceOfInvoice</DataField>
+        </Field>
+        <Field Name="WZPISAmount_MemberPriceOfInvoiceFormat">
+          <DataField>WZPISAmount_MemberPriceOfInvoiceFormat</DataField>
+        </Field>
+        <Field Name="FuEISAmount_MemberPriceOfInvoice">
+          <DataField>FuEISAmount_MemberPriceOfInvoice</DataField>
+        </Field>
+        <Field Name="FuEISAmount_MemberPriceOfInvoiceFormat">
+          <DataField>FuEISAmount_MemberPriceOfInvoiceFormat</DataField>
+        </Field>
+        <Field Name="DateofInvoice_MemberPriceOfInvoice">
+          <DataField>DateofInvoice_MemberPriceOfInvoice</DataField>
+        </Field>
+        <Field Name="CompanyInfo">
+          <DataField>CompanyInfo</DataField>
+        </Field>
+        <Field Name="CompanyInfoPicture">
+          <DataField>CompanyInfoPicture</DataField>
+        </Field>
+        <Field Name="CompanyAddr1">
+          <DataField>CompanyAddr1</DataField>
+        </Field>
+        <Field Name="CompanyAddr2">
+          <DataField>CompanyAddr2</DataField>
+        </Field>
+        <Field Name="CompanyAddr3">
+          <DataField>CompanyAddr3</DataField>
+        </Field>
+        <Field Name="CompanyAddr4">
+          <DataField>CompanyAddr4</DataField>
+        </Field>
+        <Field Name="CompanyAddr5">
+          <DataField>CompanyAddr5</DataField>
+        </Field>
+        <Field Name="CompanyInfoPhoneNo">
+          <DataField>CompanyInfoPhoneNo</DataField>
+        </Field>
+        <Field Name="CompanyInfoHomePage">
+          <DataField>CompanyInfoHomePage</DataField>
+        </Field>
+        <Field Name="CompanyInfoEMail">
+          <DataField>CompanyInfoEMail</DataField>
+        </Field>
+        <Field Name="CompanyInfoVATRegNo">
+          <DataField>CompanyInfoVATRegNo</DataField>
+        </Field>
+        <Field Name="CompanyInfoGiroNo">
+          <DataField>CompanyInfoGiroNo</DataField>
+        </Field>
+        <Field Name="CompanyInfoBankName">
+          <DataField>CompanyInfoBankName</DataField>
+        </Field>
+        <Field Name="CompanyInfoBankAccountNo">
+          <DataField>CompanyInfoBankAccountNo</DataField>
+        </Field>
+        <Field Name="CompanyInfoRegNo">
+          <DataField>CompanyInfoRegNo</DataField>
+        </Field>
+        <Field Name="YourAsignLabel">
+          <DataField>YourAsignLabel</DataField>
+        </Field>
+        <Field Name="YourSMSLabel">
+          <DataField>YourSMSLabel</DataField>
+        </Field>
+        <Field Name="YourTax">
+          <DataField>YourTax</DataField>
+        </Field>
+        <Field Name="OurSignLabel">
+          <DataField>OurSignLabel</DataField>
+        </Field>
+        <Field Name="TelefonLabel">
+          <DataField>TelefonLabel</DataField>
+        </Field>
+        <Field Name="Telefax">
+          <DataField>Telefax</DataField>
+        </Field>
+        <Field Name="DateLabel">
+          <DataField>DateLabel</DataField>
+        </Field>
+        <Field Name="AddressLabel">
+          <DataField>AddressLabel</DataField>
+        </Field>
+        <Field Name="CapitalOffice">
+          <DataField>CapitalOffice</DataField>
+        </Field>
+        <Field Name="BankDetails">
+          <DataField>BankDetails</DataField>
+        </Field>
+        <Field Name="TaxID">
+          <DataField>TaxID</DataField>
+        </Field>
+        <Field Name="TaxNummerAddress">
+          <DataField>TaxNummerAddress</DataField>
+        </Field>
+        <Field Name="DocumentNo">
+          <DataField>DocumentNo</DataField>
+        </Field>
+        <Field Name="MemberNo">
+          <DataField>MemberNo</DataField>
+        </Field>
+        <Field Name="OrderNo">
+          <DataField>OrderNo</DataField>
+        </Field>
+        <Field Name="FirstAccordingtoTextBody">
+          <DataField>FirstAccordingtoTextBody</DataField>
+        </Field>
+        <Field Name="EndAccordingTextBody">
+          <DataField>EndAccordingTextBody</DataField>
+        </Field>
+        <Field Name="FirstPleaseBody">
+          <DataField>FirstPleaseBody</DataField>
+        </Field>
+        <Field Name="EndTaxTextBody">
+          <DataField>EndTaxTextBody</DataField>
+        </Field>
+        <Field Name="EndTextBody">
+          <DataField>EndTextBody</DataField>
+        </Field>
+        <Field Name="CompanyCompletAddress">
+          <DataField>CompanyCompletAddress</DataField>
+        </Field>
+        <Field Name="CompanyInfoName">
+          <DataField>CompanyInfoName</DataField>
+        </Field>
+        <Field Name="CompanyInfoAddress">
+          <DataField>CompanyInfoAddress</DataField>
+        </Field>
+        <Field Name="CompanyInfoAddress2">
+          <DataField>CompanyInfoAddress2</DataField>
+        </Field>
+        <Field Name="CompanyInfoCity">
+          <DataField>CompanyInfoCity</DataField>
+        </Field>
+        <Field Name="CompanyInfoSWIFTCode">
+          <DataField>CompanyInfoSWIFTCode</DataField>
+        </Field>
+        <Field Name="CompanyInfoIBAN">
+          <DataField>CompanyInfoIBAN</DataField>
+        </Field>
+        <Field Name="CompanyInfoRegNumber">
+          <DataField>CompanyInfoRegNumber</DataField>
+        </Field>
+        <Field Name="CompanyAnschrift">
+          <DataField>CompanyAnschrift</DataField>
+        </Field>
+        <Field Name="Beitrittsgeld">
+          <DataField>Beitrittsgeld</DataField>
+        </Field>
+        <Field Name="BeitrittsgeldCaption">
+          <DataField>BeitrittsgeldCaption</DataField>
+        </Field>
+        <Field Name="MemberInvoiceAmount">
+          <DataField>MemberInvoiceAmount</DataField>
+        </Field>
+        <Field Name="MemberInvoiceAmountFormat">
+          <DataField>MemberInvoiceAmountFormat</DataField>
+        </Field>
+        <Field Name="MemberInvoiceAmountGemeinschaft">
+          <DataField>MemberInvoiceAmountGemeinschaft</DataField>
+        </Field>
+        <Field Name="MemberInvoiceAmountGemeinschaftFormat">
+          <DataField>MemberInvoiceAmountGemeinschaftFormat</DataField>
+        </Field>
+        <Field Name="MemberInvoiceAmountGeschäftsjahr">
+          <DataField>MemberInvoiceAmountGeschäftsjahr</DataField>
+        </Field>
+        <Field Name="MemberInvoiceAmountGeschäftsjahrFormat">
+          <DataField>MemberInvoiceAmountGeschäftsjahrFormat</DataField>
+        </Field>
+        <Field Name="MemberInvoiceAmountWärmezähler">
+          <DataField>MemberInvoiceAmountWärmezähler</DataField>
+        </Field>
+        <Field Name="MemberInvoiceAmountWärmezählerFormat">
+          <DataField>MemberInvoiceAmountWärmezählerFormat</DataField>
+        </Field>
+        <Field Name="AllInvoices">
+          <DataField>AllInvoices</DataField>
+        </Field>
+        <Field Name="AddressManagement">
+          <DataField>AddressManagement</DataField>
+        </Field>
+      </Fields>
+      <Query>
+        <DataSourceName>DataSource</DataSourceName>
+        <CommandText />
+      </Query>
+    </DataSet>
+  </DataSets>
+</Report>
